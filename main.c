@@ -1,14 +1,10 @@
+/* main.c */
 #include <stdio.h>
-Методические указания к лабораторной работе №2 17
-по курсу «Технологии разработки программного обеспечения»
-#include <string.h>
+#include "askname.h"
 int main(int argc, char **argv)
 {
- char name[255];
- printf("Enter your name: ");
- fgets(name, 255, stdin);
- printf("length = %d\n", strlen(name)); /* debug line */
- name[strlen(name)-1] = '\0'; /* remove the newline at the end */
- printf("Hello %s!\n", name);
- r  etur n  0;
+ char first[255], last[255];
+ askname(first, last);
+printf("Hello, %s %s!\n", first, last);
+ return 0;
 }
